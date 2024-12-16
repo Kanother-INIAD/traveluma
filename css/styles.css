@@ -1,0 +1,62 @@
+body {
+    font-family: sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+.sidebar {
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.sidebar .nav-link {
+    padding: 10px 15px;
+    color: #343a40;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: #e9ecef;
+}
+
+.sidebar-header {
+    margin-bottom: 30px;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+.main-header {
+    text-align: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 30px;
+}
+
+.featured-courses h2,
+.featured-articles h2 {
+    margin-bottom: 20px;
+}
+
+.course-card,
+.article-card{
+   background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.course-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #343a40;
+    color: white;
+}
