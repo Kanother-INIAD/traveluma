@@ -1,5 +1,18 @@
+.kiwimaru {
+    font-family: "Kiwi Maru", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.oswald {
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
 body {
-    font-family: sans-serif;
+    font-family: 'Oswald', 'Kiwi Maru', sans-serif;
     background-color: #f8f9fa;
     color: #343a40;
 }
@@ -7,6 +20,7 @@ body {
 .sidebar {
     min-height: 100vh;
     padding: 20px 0;
+    background-color: #81d5ff;
 }
 
 .sidebar .nav-link {
