@@ -5,18 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRAVELUMA</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="./images/slideshow1.png" alt="スライド1">
+        </div>
+        <div class="slide fade">
+            <img src="./images/slideshow2.png" alt="スライド2">
+        </div>
+        <div class="slide fade">
+            <img src="./images/slideshow3.png" alt="スライド3">
+        </div>
+        <div class="slide fade">
+            <img src="./images/slideshow4.png" alt="スライド4">
+        </div>
+    </div>
+
     <div class="container-fluid">
         <div class="row">
             <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
                 <div class="sidebar-sticky">
                     <div class="sidebar-header text-center">
-                        <img src="./images/logo.png" alt="TRAVELUMA ロゴ" class="logo img-fluid">
+                        <img src="./images/traveluma_title_black.png" alt="TRAVELUMA ロゴ" class="logo img-fluid">
                     </div>
                     <ul class="nav flex-column mt-3">
                         <li class="nav-item">
@@ -38,54 +53,69 @@
                 </div>
             </nav>
 
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 content">
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 content">
                 <div class="main-header">
-                  <h1>TRAVELUMAへようこそ！</h1>
-                  <p class="lead">競馬と旅行を組み合わせた新しい体験をあなたに。</p>
+                    <br>
+                    <br>
+                    <h1>TRAVELUMAへようこそ！</h1>
+                    <p class="lead">競馬と旅行を組み合わせた新しい体験をあなたに。</p>
                 </div>
-
+            
                 <section class="featured-courses">
                     <h2>おすすめコース</h2>
-                   <div class="row course-grid">
-                        <div class="col-md-4 mb-4 course-card">
-                            <img src="./images/course1-image1.jpg" alt="コース1" class="img-fluid">
-                            <h3>東京競馬場</h3>
-                            <a href="./courses/course1.html" class="btn btn-primary">詳細を見る</a>
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col">
+                            <div class="course-card">
+                                <img src="./images/tokyo.png" alt="コース1" class="img-fluid">
+                                <h3>東京競馬場</h3>
+                                <a href="./courses/course1.html" class="btn btn-primary">詳細を見る</a>
+                            </div>
                         </div>
-                         <div class="col-md-4 mb-4 course-card">
-                            <img src="./images/course2-image1.jpg" alt="コース2" class="img-fluid">
-                            <h3>京都競馬場</h3>
-                            <a href="./courses/course2.html" class="btn btn-primary">詳細を見る</a>
+                        <div class="col">
+                            <div class="course-card">
+                                <img src="./images/kyoto.png" alt="コース2" class="img-fluid">
+                                <h3>京都競馬場</h3>
+                                <a href="./courses/course2.html" class="btn btn-primary">詳細を見る</a>
+                            </div>
                         </div>
-                        <div class="col-md-4 mb-4 course-card">
-                            <img src="./images/course3-image1.jpg" alt="コース3" class="img-fluid">
-                             <h3>中京競馬場</h3>
-                            <a href="./courses/course3.html" class="btn btn-primary">詳細を見る</a>
+                        <div class="col">
+                            <div class="course-card">
+                                <img src="./images/nakayama.png" alt="コース3" class="img-fluid">
+                                <h3>中山競馬場</h3>
+                                <a href="./courses/course3.html" class="btn btn-primary">詳細を見る</a>
+                            </div>
                         </div>
                     </div>
                 </section>
-
+            <br>
                 <section class="featured-articles">
                     <h2>最新コラム</h2>
-                    <div class="row article-grid">
-                       <div class="col-md-4 mb-4 article-card">
-                            <h3>競馬を楽しもう！</h3>
-                            <p>競馬初心者方向けの楽しみ方をレクチャー！</p>
-                            <a href="./articles/article1.html" class="btn btn-primary">記事を読む</a>
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col">
+                            <div class="article-card">
+                                <h3>競馬を楽しもう！</h3>
+                                <p>競馬初心者方向けの楽しみ方をレクチャー！</p>
+                                <a href="./articles/article1.html" class="btn btn-primary">記事を読む</a>
+                            </div>
                         </div>
-                         <div class="col-md-4 mb-4 article-card">
-                             <h3>競馬観戦のおすすめスポット</h3>
-                             <p>競馬場での観戦ポイント紹介</p>
-                             <a href="./articles/article2.html" class="btn btn-primary">記事を読む</a>
+                        <div class="col">
+                            <div class="article-card">
+                                <h3>競馬観戦のおすすめスポット</h3>
+                                <p>競馬場での観戦ポイント紹介</p>
+                                <a href="./articles/article2.html" class="btn btn-primary">記事を読む</a>
+                            </div>
                         </div>
-                         <div class="col-md-4 mb-4 article-card">
-                             <h3>競馬旅行を楽しもう！</h3>
-                             <p>競馬旅行を計画するコツ</p>
-                             <a href="./articles/article3.html" class="btn btn-primary">記事を読む</a>
+                        <div class="col">
+                            <div class="article-card">
+                                <h3>競馬旅行を楽しもう！</h3>
+                                <p>競馬旅行を計画するコツ</p>
+                                <a href="./articles/article3.html" class="btn btn-primary">記事を読む</a>
+                            </div>
                         </div>
                     </div>
-                </section>
-                <footer class="main-footer mt-5">
+                </section>                
+
+                <footer class="main-footer mt-5 px-4">
                     <p>© 2024 TRAVELUMA. All rights reserved.</p>
                 </footer>
             </main>
@@ -94,6 +124,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-     <script src="scripts.js"></script>
+     <script src="js/scripts.js"></script>
 </body>
 </html>
