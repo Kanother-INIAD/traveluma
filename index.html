@@ -6,11 +6,13 @@
     <title>TRAVELUMA</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Google FontsよりKiwi MaruとOswaldを導入 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- 背景のスライドショーコンテナを作成 -->
     <div class="slideshow-container">
         <div class="slide fade">
             <img src="./images/slideshow1.png" alt="スライド1">
@@ -26,9 +28,39 @@
         </div>
     </div>
 
+    <!-- モバイル版でのナビゲーションバーを追加 -->
+    <nav class="navbar navbar-expand-md navbar-light d-md-none">
+        <a class="navbar-brand" href="#">
+            <img src="./images/traveluma_title_black.png" alt="TRAVELUMA ロゴ" height="30">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">ホーム</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">サイトについて</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="courses/index.html">おすすめコース</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="articles/index.html">コラム記事</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">お問い合わせ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container-fluid">
         <div class="row">
-            <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+            <!-- サイドバーの実装(モバイル版では非表示) -->
+            <nav class="col-md-3 col-lg-2 sidebar d-none d-md-block"> <!-- d-none d-md-blockを追加 -->
                 <div class="sidebar-sticky">
                     <div class="sidebar-header text-center">
                         <img src="./images/traveluma_title_black.png" alt="TRAVELUMA ロゴ" class="logo img-fluid">
@@ -53,7 +85,8 @@
                 </div>
             </nav>
 
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 content">
+            <!-- トップページ, メインコンテンツの紹介部分 -->
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-0 content">
                 <div class="main-header">
                     <br>
                     <br>
@@ -68,21 +101,21 @@
                             <div class="course-card">
                                 <img src="./images/tokyo.png" alt="コース1" class="img-fluid">
                                 <h3>東京競馬場</h3>
-                                <a href="./courses/course1.html" class="btn btn-primary">詳細を見る</a>
+                                <a href="./courses/tokyo.html" class="btn btn-primary">詳細を見る</a>
                             </div>
                         </div>
                         <div class="col">
                             <div class="course-card">
                                 <img src="./images/kyoto.png" alt="コース2" class="img-fluid">
                                 <h3>京都競馬場</h3>
-                                <a href="./courses/course2.html" class="btn btn-primary">詳細を見る</a>
+                                <a href="./courses/kyoto.html" class="btn btn-primary">詳細を見る</a>
                             </div>
                         </div>
                         <div class="col">
                             <div class="course-card">
                                 <img src="./images/nakayama.png" alt="コース3" class="img-fluid">
                                 <h3>中山競馬場</h3>
-                                <a href="./courses/course3.html" class="btn btn-primary">詳細を見る</a>
+                                <a href="./courses/nakayama.html" class="btn btn-primary">詳細を見る</a>
                             </div>
                         </div>
                     </div>
@@ -95,21 +128,21 @@
                             <div class="article-card">
                                 <h3>競馬を楽しもう！</h3>
                                 <p>競馬初心者方向けの楽しみ方をレクチャー！</p>
-                                <a href="./articles/article1.html" class="btn btn-primary">記事を読む</a>
+                                <a href="./articles/beginner.html" class="btn btn-primary">記事を読む</a>
                             </div>
                         </div>
                         <div class="col">
                             <div class="article-card">
                                 <h3>競馬観戦のおすすめスポット</h3>
                                 <p>競馬場での観戦ポイント紹介</p>
-                                <a href="./articles/article2.html" class="btn btn-primary">記事を読む</a>
+                                <a href="./articles/favspot.html" class="btn btn-primary">記事を読む</a>
                             </div>
                         </div>
                         <div class="col">
                             <div class="article-card">
                                 <h3>競馬旅行を楽しもう！</h3>
                                 <p>競馬旅行を計画するコツ</p>
-                                <a href="./articles/article3.html" class="btn btn-primary">記事を読む</a>
+                                <a href="./articles/planning.html" class="btn btn-primary">記事を読む</a>
                             </div>
                         </div>
                     </div>

@@ -35,15 +35,21 @@ body {
     opacity: 1;
     transition: opacity 1.5s ease-in-out;
 }
+
 .fade-out {
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
 }
 
 .sidebar {
-    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
     padding: 20px 0;
-    background-color: #81d5ff;
+    background-color: #81D5FF;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .sidebar .nav-link {
@@ -72,15 +78,22 @@ body {
     margin-bottom: 30px;
 }
 
+.featured-courses,
+.featured-articles {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .featured-courses h2,
 .featured-articles h2 {
     color: white;
+    margin-left: 20px;
     margin-bottom: 20px;
 }
 
 .course-grid,
 .article-grid {
-    gap: 20px; /* カード間の余白を追加 */
+    gap: 20px;
 }
 
 .course-card, .article-card {
@@ -89,6 +102,7 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin: 15px 0;
 }
 
 .course-card img {
@@ -105,4 +119,110 @@ body {
     color: white;
     width: 100%;
     margin: 0;
+}
+
+main.content {
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+
+.main-footer {
+    margin-left: -15px;
+    margin-right: -15px;
+    width: calc(100% + 30px);
+}
+
+.row-cols-1 {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col {
+    padding: 25px;
+    padding-right: 30px;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    overflow-x: hidden;
+}
+
+/* モバイル版ナビゲーションバー */
+.navbar {
+    background-color: #81D5FF;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1030;
+}
+
+.navbar-brand img {
+    max-height: 40px;
+    width: auto;
+}
+
+/* メインコンテンツの調整 */
+@media (max-width: 767.98px) {
+    .sidebar {
+        display: none;
+    }
+
+    main.content {
+        margin-top: 56px;
+        width: 100%;
+        padding: 15px;
+        padding-bottom: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
+    .container-fluid {
+        padding: 0;
+    }
+
+    .main-header {
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        width: 25%;
+    }
+
+    .content {
+        margin-left: 25%;
+        width: 75%;
+    }
+}
+
+@media (min-width: 992px) {
+    .sidebar {
+        width: 16.666667%;
+    }
+
+    .content {
+        margin-left: 16.666667%;
+        width: 83.333333%;
+    }
+}
+
+/* サイドバーの内容物のスタイル調整 */
+.sidebar-sticky {
+    position: sticky;
+    top: 0;
+    height: calc(100vh - 40px);
+    padding-top: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* コンテンツエリアの調整 */
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    overflow-x: hidden;
 }
