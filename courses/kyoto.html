@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京都競馬場旅行のおすすめコース</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- ファビコンの設定 -->
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../traveluma_logo.png">
+    <!-- Google FontsよりKiwi MaruとOswaldを導入 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ローディング画面の実装 -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <img src="../images/traveluma_title_white.png" alt="TRAVELUMA" class="loading-logo">
+            <p class="loading-text">Now Loading...</p>
+        </div>
+    </div>
+    <!-- 背景のスライドショーコンテナを作成 -->
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="../images/slideshow1.png" alt="スライド1">
+        </div>
+        <div class="slide fade">
+            <img src="../images/slideshow2.png" alt="スライド2">
+        </div>
+        <div class="slide fade">
+            <img src="../images/slideshow3.png" alt="スライド3">
+        </div>
+        <div class="slide fade">
+            <img src="../images/slideshow4.png" alt="スライド4">
+        </div>
+    </div>
+
+    <!-- モバイル版でのナビゲーションバーを追加 -->
+    <nav class="navbar navbar-expand-md navbar-light d-md-none">
+        <a class="navbar-brand" href="../index.html">
+            <img src="../images/traveluma_title_black.png" alt="TRAVELUMA ロゴ" height="30">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">To the top</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- サイドバーの実装(モバイル版では非表示) -->
+            <nav class="col-md-3 col-lg-2 sidebar d-none d-md-block"> <!-- d-none d-md-blockを追加 -->
+                <div class="sidebar-sticky">
+                    <div class="sidebar-header text-center">
+                        <a href="../index.html">
+                            <img src="../images/traveluma_title_black.png" alt="TRAVELUMA ロゴ" class="logo img-fluid">
+                        </a>
+                    </div>
+                    <ul class="nav flex-column mt-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">To the top</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- メインコンテンツ -->
+            <!-- メインコンテンツ部分 -->
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 content">
+             <div class="blog-content">
+                    <h1 class="blog-title">京都競馬場旅行のおすすめコース</h1>
+
+                 <div class="table-of-contents">
+                    <h2>目次</h2>
+                         <ul>
+                            <li><a href="#about">京都競馬場とは</a></li>
+                            <li><a href="#g1-races">行われるG1レース</a></li>
+                            <li><a href="#recommended-route">おすすめルート！</a></li>
+                            <li><a href="#summary">まとめ</a></li>
+                        </ul>
+                    </div>
+
+                    <section id="about" class="section">
+                        <h2>京都競馬場とは</h2>
+                        <p>京都競馬場は、京都府京都市伏見区に位置する歴史ある競馬場です。2016年の大規模リニューアルを経て、最新設備を備えた競馬場として生まれ変わりました。最大収容人数約13万人を誇り、伝統と革新が融合した魅力的な競馬場として知られています。</p>
+                        <p>アクセスは、地下鉄烏丸線・近鉄京都線「竹田駅」から徒歩約15分、または京阪本線「淀駅」から徒歩約5分と、京都市内からのアクセスも便利です。</p>
+                        <p>施設の特徴として、開放感あふれる4層吹き抜けのグランドスタンド、日本最大級の大型ビジョン、そして京都らしい和のテイストを取り入れた意匠が随所に施されています。特に芝コースは高低差が少なく、スピード勝負が期待できるコース設計となっています。</p>
+                    </section>
+
+                    <section id="g1-races" class="section">
+                        <h2>行われるG1レース</h2>
+                        <div class="g1-races">
+                            <h3>春シーズン</h3>
+                            <ul>
+                                <li>◆ 桜花賞（4月上旬）- 3歳牝馬クラシック第1戦</li>
+                                <li>◆ マイルチャンピオンシップ（5月下旬）- マイル王者決定戦</li>
+                            </ul>
+                            <h3>秋シーズン</h3>
+                            <ul>
+                                <li>◆ 菊花賞（10月下旬）- 3歳クラシック最終戦</li>
+                                <li>◆ エリザベス女王杯（11月中旬）- 秋の牝馬王者決定戦</li>
+                                <li>◆ マイルチャンピオンシップ（11月下旬）- 秋のマイル王者決定戦</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="recommended-route" class="section">
+                        <h2>おすすめルート！</h2>
+            
+                        <div class="route-step">
+                            <h3>STEP1：伏見稲荷大社で朝詣り</h3>
+                            <p>競馬観戦前に、京都を代表する神社「伏見稲荷大社」で勝利祈願。千本鳥居の神秘的な雰囲気を楽しみながら、静かな朝の参拝がおすすめです。</p>
+                            <p>営業時間：終日参拝可能（朝が特におすすめ）</p>
+                        </div>
+
+                        <div class="route-step">
+                            <h3>STEP2：名店「麺屋はなび」で腹ごしらえ</h3>
+                            <p>竹田駅近くにある人気ラーメン店「麺屋はなび」で台湾まぜそばを堪能。独特の味付けと食感が競馬観戦前の活力となります。</p>
+                            <p>営業時間：11:00〜15:00（水曜定休）</p>
+                        </div>
+
+                        <div class="route-step">
+                            <h3>STEP3：京都競馬場で競馬を満喫</h3>
+                            <p>京都競馬場ならではのポイントをご紹介：</p>
+                            <ul>
+                                <li>和モダンな雰囲気のパドック観戦</li>
+                                <li>開放的なターフビューで迫力のレース観戦</li>
+                                <li>京都競馬場限定グルメの探索</li>
+                                <li>日本庭園風の休憩スペースでの寛ぎ</li>
+                            </ul>
+                        </div>
+
+                        <div class="route-step">
+                            <h3>STEP4：夕暮れの嵐山散策</h3>
+                            <p>競馬観戦後は、嵐山エリアへ移動。渡月橋からの夕景、竹林の小径のライトアップなど、京都の風情ある夜の景色をお楽しみください。</p>
+                            <p>おすすめ時間：16:00〜19:00（季節により変動）</p>
+                        </div>
+
+                        <div class="route-step">
+                            <h3>STEP5：嵐山温泉旅館でゆったり</h3>
+                            <p>1日の締めくくりは、嵐山温泉の老舗旅館「星のや京都」でのステイ。川のせせらぎを聞きながらの露天風呂と京会席で、贅沢なひとときをお過ごしください。夜には部屋から保津川と山々の幻想的な風景を楽しめます。</p>
+                        </div>
+                    </section>
+
+                    <section id="summary" class="summary">
+                        <h2>まとめ</h2>
+                        <p>京都競馬場は、伝統ある古都・京都に位置する近代的な競馬場として、独特の魅力を放っています。最新設備と和の趣を併せ持つ施設で、快適な競馬観戦を楽しむことができます。</p>
+                        <p>また、周辺には伏見稲荷大社や嵐山といった京都を代表する観光地があり、競馬観戦と観光を絶妙に組み合わせた旅行プランを立てることができます。朝は神社参拝で心を整え、昼は競馬の興奮を味わい、夕方からは京都の風情ある街並みを堪能する。そして夜は温泉旅館でゆったりと。京都ならではの和の要素を随所に取り入れた、心に残る思い出深い旅をお楽しみください。</p>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <script src="../js/scripts.js"></script>
+</body>
+</html>

@@ -90,8 +90,8 @@ body {
 
 .featured-courses,
 .featured-articles {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .featured-courses h2,
@@ -120,6 +120,17 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin: 15px 0;
+}
+
+.article-card p {
+    color: black;
+}
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
 .course-card img {
@@ -316,4 +327,184 @@ main.content {
     100% {
         opacity: 1;
     }
+}
+
+/* 天気と時間を表示する部分 */
+
+.weather-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 15px auto;
+    width: 90%;
+    max-width: 250px;
+}
+
+.weather-info, .time-info {
+    font-size: 1.1em;
+    margin: 8px 0;
+    color: #343a40;
+}
+
+.time-info {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.weather-container h1 {
+    margin-bottom: 20px;
+}
+
+#weather, #time {
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+#time {
+    font-weight: bold;
+}
+
+/* Aboutセクションのスタイル */
+.about-section {
+    padding: 60px 20px;
+    color: white;
+}
+
+.section-title {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.about-image {
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-image:hover {
+    transform: scale(1.05); /* ホバー時に拡大 */
+}
+
+.about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.scroll-btn {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+}
+
+.col-md-6 {
+    padding: 15px;
+}
+
+/* ブログ記事のスタイル */
+.blog-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-title {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 3px solid #81D5FF;
+    padding-bottom: 15px;
+}
+
+.table-of-contents {
+    background-color: #f8f9fa;
+    padding: 20px 40px;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+.table-of-contents h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.table-of-contents ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.table-of-contents li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.table-of-contents li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #81D5FF;
+}
+
+.section {
+    margin: 40px 0;
+}
+
+.section h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 5px solid #81D5FF;
+}
+
+.section p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.g1-races {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.g1-races h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.g1-races ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.route-step {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 5px solid #81D5FF;
+}
+
+.route-step h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.summary {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.summary h2 {
+    color: #333;
+    margin-bottom: 15px;
 }

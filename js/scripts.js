@@ -74,3 +74,102 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 500);
     }, 4000);
 });
+
+// 以下、OpenWeatherを用いる部分とする
+
+const API_KEY_WEATHER = '2f7a3ea0ed36451433cdd6273f0325ac';
+const URL = "https://api.openweathermap.org/data/2.5/weather?";
+
+// 各競馬場の位置情報
+const LOCATIONS = {
+    tokyo: {
+        city: 'Fuchu,JP',
+        name: '東京'
+    },
+    kyoto: {
+        city: 'Kyoto,JP',
+        name: '京都'
+    },
+    nakayama: {
+        city: 'Funabashi,JP',
+        name: '中山'
+    }
+};
+
+// 天気情報を取得して表示する関数
+function fetchWeather(location, locationKey) {
+    const url = `${URL}q=${location.city}&units=metric&appid=${API_KEY_WEATHER}`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            // 天気情報の表示
+            const weatherElement = document.getElementById(`weather-${locationKey}`);
+            if (weatherElement) {
+                weatherElement.innerHTML = `${location.name}競馬場周辺<br>天気: ${data.weather[0].main}<br>気温: ${Math.round(data.main.temp)}°C`;
+            }
+
+            // 時刻の表示
+            const timeElement = document.getElementById(`time-${locationKey}`);
+            if (timeElement) {
+                let dateObj = new Date();
+                dateObj.setTime(Number(data.dt) * 1000);
+                let month = dateObj.getMonth();
+                let date = dateObj.getDate();
+                let hours = dateObj.getHours();
+                let minutes = dateObj.getMinutes();
+                const formattedTime = `${month + 1}月${date}日 ${hours}時${minutes}分更新`;
+                timeElement.innerHTML = formattedTime;
+            }
+        })
+        .catch(error => {
+            console.error(`Error fetching weather data for ${location.name}:`, error);
+            const weatherElement = document.getElementById(`weather-${locationKey}`);
+            if (weatherElement) {
+                weatherElement.innerHTML = `天気情報を取得できませんでした`;
+            }
+        });
+}
+
+// DOMの読み込み完了後に実行
+document.addEventListener('DOMContentLoaded', function() {
+    // 各競馬場の天気情報を取得
+    Object.entries(LOCATIONS).forEach(([key, location]) => {
+        fetchWeather(location, key);
+    });
+
+    // 30分ごとに天気情報を更新
+    setInterval(() => {
+        Object.entries(LOCATIONS).forEach(([key, location]) => {
+            fetchWeather(location, key);
+        });
+    }, 1800000); // 30分 = 1800000ミリ秒
+});
+
+document.querySelectorAll('.scroll-btn').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+document.querySelectorAll('.scroll-btn').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
