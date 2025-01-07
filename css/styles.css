@@ -15,14 +15,24 @@ body {
 }
 
 .slide {
-    display: none;
-    width: 100%;
-    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
     opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+    transition: opacity 2s ease-in-out; /* トランジションを追加 */
+    display: block; /* 初期状態は非表示 */
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide.previous {
+    opacity: 0;
+    z-index: 0;
 }
 
 .slide img {
@@ -86,6 +96,13 @@ body {
 
 .featured-courses h2,
 .featured-articles h2 {
+    color: white;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.featured-courses p,
+.featured-articles p {
     color: white;
     margin-left: 20px;
     margin-bottom: 20px;
@@ -225,4 +242,78 @@ main.content {
     padding-left: 0;
     padding-right: 0;
     overflow-x: hidden;
+}
+
+/* ローディング画面について */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #81D5FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: backgroundChange 4s forwards;
+}
+
+.loading-content {
+    text-align: center;
+}
+
+.loading-logo {
+    width: 80%;
+    max-width: 705.5px; /* 1411pxの半分 */
+    height: auto;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideLogo 4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.loading-text {
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease 2s forwards;
+}
+
+@keyframes backgroundChange {
+    0% {
+        background-color: #81D5FF;
+    }
+    100% {
+        background-color: #000080;
+    }
+}
+
+@keyframes slideLogo {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    60% {
+        transform: translateX(10%);
+    }
+    80% {
+        transform: translateX(-5%);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

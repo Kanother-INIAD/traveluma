@@ -6,12 +6,22 @@
     <title>TRAVELUMA</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- ファビコンの設定 -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="traveluma_logo.png">
     <!-- Google FontsよりKiwi MaruとOswaldを導入 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- ローディング画面の実装 -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <img src="./images/traveluma_title_white.png" alt="TRAVELUMA" class="loading-logo">
+            <p class="loading-text">Now Loading...</p>
+        </div>
+    </div>
     <!-- 背景のスライドショーコンテナを作成 -->
     <div class="slideshow-container">
         <div class="slide fade">
@@ -96,6 +106,7 @@
             
                 <section class="featured-courses">
                     <h2>おすすめコース</h2>
+                    <p>今回は中央10場の中でも特にTRAVELUMA編集部として選定した、東京・京都・中山の3つの競馬旅行をおすすめしたいと思います！</p>
                     <div class="row row-cols-1 row-cols-md-3 g-4">
                         <div class="col">
                             <div class="course-card">
