@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>競馬を楽しもう！</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- ファビコンの設定 -->
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../traveluma_logo.png">
+    <!-- Google FontsよりKiwi MaruとOswaldを導入 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ローディング画面の実装 -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <img src="../images/traveluma_title_white.png" alt="TRAVELUMA" class="loading-logo">
+            <p class="loading-text">Now Loading...</p>
+        </div>
+    </div>
+    <!-- 背景のスライドショーコンテナを作成 -->
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="../images/slideshow1.png" alt="スライド1">
+        </div>
+        <div class="slide fade">
+            <img src="../images/slideshow2.png" alt="スライド2">
+        </div>
+        <div class="slide fade">
+            <img src="../images/slideshow3.png" alt="スライド3">
+        </div>
+        <div class="slide fade">
+            <img src="../images/slideshow4.png" alt="スライド4">
+        </div>
+    </div>
+
+    <!-- モバイル版でのナビゲーションバーを追加 -->
+    <nav class="navbar navbar-expand-md navbar-light d-md-none">
+        <a class="navbar-brand" href="../index.html">
+            <img src="../images/traveluma_title_black.png" alt="TRAVELUMA ロゴ" height="30">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">To the top</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- サイドバーの実装(モバイル版では非表示) -->
+            <nav class="col-md-3 col-lg-2 sidebar d-none d-md-block"> <!-- d-none d-md-blockを追加 -->
+                <div class="sidebar-sticky">
+                    <div class="sidebar-header text-center">
+                        <a href="../index.html">
+                            <img src="../images/traveluma_title_black.png" alt="TRAVELUMA ロゴ" class="logo img-fluid">
+                        </a>
+                    </div>
+                    <ul class="nav flex-column mt-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">To the top</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- メインコンテンツ -->
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 content">
+                <div class="blog-content">
+                    <h1 class="blog-title">競馬を楽しもう！</h1>
+            
+                    <div class="table-of-contents">
+                        <h2>目次</h2>
+                        <ul>
+                            <li><a href="#intro">はじめに</a></li>
+                            <li><a href="#get-ticket">入場券をネットで買おう！</a></li>
+                            <li><a href="#betting-types">馬券の種類と購入方法</a></li>
+                            <li><a href="#beginner-bet">初心者は「単複」を買おう！</a></li>
+                            <li><a href="#enjoy-tips">競馬を楽しむためのヒント</a></li>
+                            <li><a href="#summary">まとめ</a></li>
+                        </ul>
+                    </div>
+            
+                    <section id="intro" class="section">
+                        <h2>はじめに</h2>
+                        <p>競馬は、レースのスリルと興奮、そして馬たちの美しさを楽しめる魅力的なスポーツです。初心者の方でも気軽に楽しめるように、競馬の基本から楽しみ方までを分かりやすく解説します。この記事を読めば、あなたも競馬の虜になること間違いなし！</p>
+                    </section>
+            
+                    <section id="get-ticket" class="section">
+                        <h2>入場券をネットで買おう！</h2>
+                        <p>競馬場への入場券は、事前にネットで購入するのがおすすめです。当日券よりもスムーズに入場できるだけでなく、割引が適用される場合もあります。JRAの公式サイトや各競馬場のウェブサイトで、入場券の購入方法を確認しましょう。</p>
+                        <p>また、競馬場によっては、指定席券や特別席券も販売されています。より快適に競馬を楽しみたい方は、これらのチケットも検討してみましょう。</p>
+                    </section>
+            
+                    <section id="betting-types" class="section">
+                        <h2>馬券の種類と購入方法</h2>
+                        <p>競馬の楽しみの一つである馬券購入ですが、様々な種類があり、最初は戸惑うかもしれません。主な馬券の種類は以下の通りです。</p>
+                        <ul>
+                            <li><strong>単勝</strong>：1着になる馬を当てる</li>
+                            <li><strong>複勝</strong>：3着以内に入る馬を当てる</li>
+                            <li><strong>枠連</strong>：1着と2着になる馬の枠番号を当てる</li>
+                            <li><strong>馬連</strong>：1着と2着になる馬の組み合わせを当てる</li>
+                            <li><strong>馬単</strong>：1着と2着になる馬の順番まで当てる</li>
+                            <li><strong>ワイド</strong>：3着以内に入る2頭の組み合わせを当てる</li>
+                            <li><strong>三連複</strong>：1着から3着になる馬の組み合わせを当てる</li>
+                            <li><strong>三連単</strong>：1着から3着になる馬の順番まで当てる</li>
+                        </ul>
+                        <p>馬券は、競馬場内のマークシートや、ネット投票で購入できます。初心者の方は、まずは簡単な単勝や複勝から試してみましょう。</p>
+                    </section>
+            
+                    <section id="beginner-bet" class="section">
+                        <h2>初心者は「単複」を買おう！</h2>
+                        <p>競馬初心者の方には、まず「単勝」と「複勝」の馬券をおすすめします。</p>
+                        <ul>
+                            <li><strong>単勝</strong>：1着になる馬を当てるシンプルな馬券です。予想が的中すれば、配当金も大きくなる可能性があります。</li>
+                            <li><strong>複勝</strong>：3着以内に入る馬を当てる馬券です。的中しやすいので、競馬の雰囲気を楽しむのに最適です。</li>
+                        </ul>
+                        <p>まずは少額から試してみて、徐々に慣れていきましょう。競馬新聞や専門家の予想を参考にしながら、自分なりの予想を立てるのも楽しいです。</p>
+                    </section>
+
+                    <section id="enjoy-tips" class="section">
+                        <h2>競馬を楽しむためのヒント</h2>
+                        <p>競馬は、レースを観戦するだけでなく、様々な楽しみ方があります。</p>
+                         <ul>
+                            <li><strong>パドックで馬の様子を観察</strong>：レース前にパドックで馬の状態をチェックし、調子の良い馬を見つけるのも面白いです。</li>
+                            <li><strong>競馬場グルメを楽しむ</strong>：競馬場には、ご当地グルメや人気店の味が楽しめるフードコートがあります。美味しい食事を楽しみながら、レース観戦をしましょう。</li>
+                            <li><strong>競馬仲間を作る</strong>：競馬場には、同じ趣味を持つ人々が集まります。競馬仲間を作って、情報交換や予想を語り合うのも楽しいです。</li>
+                            <li><strong>イベントに参加する</strong>：競馬場では、様々なイベントが開催されています。イベントに参加して、競馬をより深く楽しみましょう。</li>
+                        </ul>
+                    </section>
+            
+                    <section id="summary" class="summary">
+                        <h2>まとめ</h2>
+                        <p>競馬は、初心者でも気軽に楽しめるエンターテイメントです。この記事を参考に、ぜひ競馬場へ足を運んでみてください。レースのスリルと興奮、そして馬たちの美しさを楽しんで、素敵な思い出を作りましょう！</p>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <script src="../js/scripts.js"></script>
+</body>
+</html>
